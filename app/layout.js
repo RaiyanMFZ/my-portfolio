@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <ul className="flex space-x-6">
                 <li>
 
-                    <a href="about/" className="border-b-2 border-transparent hover:border-blue-500">
+                    <a href="/about/" className="border-b-2 border-transparent hover:border-blue-500">
                         About
                     </a>
                 </li>
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
     <main>
         {children}
     </main>
-    <footer className="bg-gray-900 text-white text-center py-6 mt-12">
+    <footer className="bg-gray-900 text-white text-center py-6 mt-12 mt-auto">
         <div className="container mx-auto">
             <div className="flex justify-center space-x-6 mb-4">
                 <a href="https://linkedin.com/in/deinprofil" target="_blank" rel="noopener noreferrer">
