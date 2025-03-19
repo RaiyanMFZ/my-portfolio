@@ -19,11 +19,59 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    >
+    <header className="flex justify-between items-center px-8 py-4 shadow-md"
+            style={{
+                backgroundColor: "white",
+            }}
+    >
+        <h1 className="text-lg font-semibold">Raiyan Mahfuz</h1>
+        <nav>
+            <ul className="flex space-x-6">
+                <li>
+
+                    <a href="./about/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="./skills/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="./projects/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact/Page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <footer className="bg-gray-900 text-white text-center py-6 mt-12">
+        <div className="container mx-auto">
+            <div className="flex justify-center space-x-6 mb-4">
+                <a href="https://linkedin.com/in/deinprofil" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/deinprofil" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="mailto:sadgidmahfuz@email.com">sadgidmahfuz@email.com</a>
+            </div>
+            <p className="text-sm">© 2024 Raiyan Mahfuz. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <main>
         {children}
-      </body>
+    </main>
+    </body>
     </html>
   );
 }
