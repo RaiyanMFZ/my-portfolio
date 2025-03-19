@@ -32,28 +32,31 @@ export default function RootLayout({ children }) {
             <ul className="flex space-x-6">
                 <li>
 
-                    <a href="./about/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                    <a href="about/" className="border-b-2 border-transparent hover:border-blue-500">
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="./skills/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                    <a href="/skills/" className="border-b-2 border-transparent hover:border-blue-500">
                         Skills
                     </a>
                 </li>
                 <li>
-                    <a href="./projects/page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                    <a href="/projects/" className="border-b-2 border-transparent hover:border-blue-500">
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href="./contact/Page.js" className="border-b-2 border-transparent hover:border-blue-500">
+                    <a href="/contact/" className="border-b-2 border-transparent hover:border-blue-500">
                         Contact
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
+    <main>
+        {children}
+    </main>
     <footer className="bg-gray-900 text-white text-center py-6 mt-12">
         <div className="container mx-auto">
             <div className="flex justify-center space-x-6 mb-4">
@@ -68,9 +71,6 @@ export default function RootLayout({ children }) {
             <p className="text-sm">© 2024 Raiyan Mahfuz. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-    <main>
-        {children}
-    </main>
     </body>
     </html>
   );
