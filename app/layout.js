@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-    <header className="flex justify-between items-center px-8 py-4 shadow-md"
+    <header className="flex justify-between items-center px-8 py-6 text-blue-500"
             style={{
                 backgroundColor: "white",
             }}
@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
         <nav>
             <ul className="flex space-x-6">
                 <li>
-
                     <a href="/about/" className="border-b-2 border-transparent hover:border-blue-500">
                         About
                     </a>
@@ -55,9 +54,27 @@ export default function RootLayout({ children }) {
         </nav>
     </header>
     <main>
-        {children}
+        <div className="flex justify-between items-center py-50">
+            <nav className="w-1/2">
+                <nav className="text-center text-3xl font-bold text-gray-500">Hello Im</nav>
+                <nav className="text-center text-4xl font-bold py-1">Raiyan Mahfuz</nav>
+                <nav className="text-center text-3xl font-bold text-gray-500 py-1">Frontend Developer</nav>
+                <nav className="flex justiy-between justify-center space-x-3 py-1">
+                    <button
+                        type="button"
+                        className="w-40 text-white bg-black border-3  font-medium rounded-full text-sm px-6 py-3 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-neutral-800">
+                        <a href="/MahfuzRaiyan_Lebenslauf.pdf" download>Download CV</a>
+                    </button>
+                    <button
+                        type="button"
+                        className="w-40 text-white bg-sky-600 border-3 border-sky font-medium rounded-full text-sm px-6 py-3 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-sky-800">
+                        Contact info
+                    </button>
+                </nav>
+            </nav>
+        </div>
     </main>
-    <footer className="bg-gray-900 text-white text-center py-6 mt-12">
+    <footer className="bg-sky-500 text-white text-center py-6 mt-12 font-bold">
         <div className="container mx-auto">
             <div className="flex justify-center space-x-6 mb-4">
                 <a href="https://linkedin.com/in/deinprofil" target="_blank" rel="noopener noreferrer">
@@ -68,7 +85,7 @@ export default function RootLayout({ children }) {
                 </a>
                 <a href="mailto:sadgidmahfuz@email.com">sadgidmahfuz@email.com</a>
             </div>
-            <p className="text-sm">© 2024 Raiyan Mahfuz. Alle Rechte vorbehalten.</p>
+            <p className="text-sm">© 2025 Raiyan Mahfuz. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
     </body>
