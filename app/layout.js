@@ -22,14 +22,19 @@ export default function RootLayout({ children }) {
     <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-    <header className="flex justify-between items-center px-8 py-6 text-blue-500"
+    <header className="flex justify-between items-center px-8 py-6 text-blue-500 text-2xl"
             style={{
                 backgroundColor: "white",
             }}
     >
-        <h1 className="text-lg font-semibold">Raiyan Mahfuz</h1>
+        <h1 className="text-2xl font-semibold">Raiyan Mahfuz</h1>
         <nav>
             <ul className="flex space-x-6">
+                <li>
+                    <a href="/home/" className="border-b-2 border-transparent hover:border-blue-500">
+                        Home
+                    </a>
+                </li>
                 <li>
                     <a href="/about/" className="border-b-2 border-transparent hover:border-blue-500">
                         About
@@ -54,25 +59,31 @@ export default function RootLayout({ children }) {
         </nav>
     </header>
     <main>
-        <div className="flex justify-between items-center py-50">
-            <nav className="w-1/2">
-                <nav className="text-center text-3xl font-bold text-gray-500">Hello Im</nav>
-                <nav className="text-center text-4xl font-bold py-1">Raiyan Mahfuz</nav>
-                <nav className="text-center text-3xl font-bold text-gray-500 py-1">Frontend Developer</nav>
-                <nav className="flex justiy-between justify-center space-x-3 py-1">
+
+        <div className="flex justify-between items-center py-50 p-5">
+            <nav className="w-1/2 p-5">
+                <nav className="text-center text-4xl font-bold text-gray-400">Hello I'm</nav>
+                <nav className="text-center text-5xl font-bold py-2">Raiyan Mahfuz</nav>
+                <nav className="text-center text-5xl font-bold text-gray-400 py-2">Frontend Developer</nav>
+                <nav className="flex justiy-between justify-center space-x-3 py-4">
                     <button
                         type="button"
-                        className="w-40 text-white bg-black border-3  font-medium rounded-full text-sm px-6 py-3 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-neutral-800">
+                        className="w-40 text-white bg-black border-3  font-medium rounded-full text-sm px-8 py-4 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-neutral-700">
                         <a href="/MahfuzRaiyan_Lebenslauf.pdf" download>Download CV</a>
                     </button>
                     <button
                         type="button"
-                        className="w-40 text-white bg-sky-600 border-3 border-sky font-medium rounded-full text-sm px-6 py-3 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-sky-800">
+                        className="w-40 text-white bg-sky-600 border-3 border-sky font-medium rounded-full text-sm px-8 py-4 text-center mb-2 transition duration-300 hover:shadow-md hover:bg-sky-800">
                         Contact info
                     </button>
                 </nav>
             </nav>
         </div>
+
+        <div>
+            <h2 className="text-center text-sky-600 font-bold border-b-2 border-blue-500 border-transparent pt-40 text-2xl">About</h2>
+        </div>
+
     </main>
     <footer className="bg-sky-500 text-white text-center py-6 mt-12 font-bold">
         <div className="container mx-auto">
