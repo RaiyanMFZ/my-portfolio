@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 
         <div className="flex justify-between items-center py-50 p-5">
             <nav className="w-1/2 p-5">
-                <nav className="text-center text-4xl font-bold text-gray-400">Hello I'm</nav>
+                <nav className="text-center text-4xl font-bold text-gray-400">Hello I`m</nav>
                 <nav className="text-center text-5xl font-bold py-2">Raiyan Mahfuz</nav>
                 <nav className="text-center text-5xl font-bold text-gray-400 py-2">Frontend Developer</nav>
                 <nav className="flex justiy-between justify-center space-x-3 py-4">
