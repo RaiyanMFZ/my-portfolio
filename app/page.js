@@ -18,12 +18,12 @@ export default function Home() {
           >
             Download CV
           </a>
-          <button
-            type="button"
+          <a
+            href="#contact"
             className="btn btn-primary"
           >
-            Contact info
-          </button>
+            Contact Me
+          </a>
         </div>
       </div>
       
@@ -44,26 +44,13 @@ export default function Home() {
                 My journey in web development started 5 years ago, and I've been continuously learning and adapting to new technologies and trends ever since.
               </p>
             </div>
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-8 rounded-xl shadow-md">
-              <h3 className="font-bold text-xl mb-4 text-gray-800 dark:text-gray-200">Personal Information</h3>
-              <ul className="space-y-3">
-                <li className="flex">
-                  <span className="font-semibold w-24 text-gray-700 dark:text-gray-300">Name:</span>
-                  <span className="text-gray-700 dark:text-gray-300">Raiyan Mahfuz</span>
-                </li>
-                <li className="flex">
-                  <span className="font-semibold w-24 text-gray-700 dark:text-gray-300">Location:</span>
-                  <span className="text-gray-700 dark:text-gray-300">Frankfurt, Germany</span>
-                </li>
-                <li className="flex">
-                  <span className="font-semibold w-24 text-gray-700 dark:text-gray-300">Email:</span>
-                  <span className="text-gray-700 dark:text-gray-300">sadgidmahfuz@gmail.com</span>
-                </li>
-                <li className="flex">
-                  <span className="font-semibold w-24 text-gray-700 dark:text-gray-300">Interests:</span>
-                  <span className="text-gray-700 dark:text-gray-300">Web Design, UI/UX, Modern JS Frameworks</span>
-                </li>
-              </ul>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md aspect-[3/4] flex items-center justify-center">
+              <div className="text-gray-400 dark:text-gray-500 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-24 w-24 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-4">Profile Image</p>
+              </div>
             </div>
           </div>
         </div>
