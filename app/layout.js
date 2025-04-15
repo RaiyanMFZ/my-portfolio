@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.className}>
         <body className="min-h-screen bg-transparent flex flex-col">
-        <div className="relative flex-1 flex flex-col z-10">
+        <div className="relative flex-1 flex flex-col z-20">
             <HeaderTabs />
             
             <main className="relative z-20 flex-1">

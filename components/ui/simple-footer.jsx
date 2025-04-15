@@ -10,7 +10,7 @@ export function SimpleFooter() {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-200 py-8 mt-20">
+    <footer className="relative z-20 bg-white border-t border-gray-200 py-8 mt-20">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>

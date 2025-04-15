@@ -8,7 +8,7 @@ export function HeaderTabs() {
   const [activeTab, setActiveTab] = useState("home");
   
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/70 backdrop-blur-sm py-4 border-b border-gray-200">
+    <header className="sticky top-0 z-30 w-full bg-white/70 backdrop-blur-sm py-4">
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="text-blue-500 text-xl font-medium">
           Raiyan Mahfuz
