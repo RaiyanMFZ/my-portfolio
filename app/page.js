@@ -76,154 +76,156 @@ export default function Home() {
             My Skills
           </h2>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Frontend Category */}
-            <div className="bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-blue-500 dark:text-blue-400">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Frontend Development</h3>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">HTML/CSS</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">95%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '95%' }}></div>
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            {/* HTML Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">HTML</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '80%' }}
+                    ></div>
                   </div>
                 </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">JavaScript</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">90%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '90%' }}></div>
-                  </div>
-                </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">React</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">88%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '88%' }}></div>
-                  </div>
-                </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Intermediate
+                </span>
               </div>
             </div>
             
-            {/* Frameworks Category */}
-            <div className="bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-purple-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-purple-500 dark:text-purple-400">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Frameworks & Libraries</h3>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">Next.js</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">85%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '85%' }}></div>
+            {/* PYTHON Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">PYTHON</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '40%' }}
+                    ></div>
                   </div>
                 </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">Tailwind CSS</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">92%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '92%' }}></div>
-                  </div>
-                </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">Redux</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">80%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Basics
+                </span>
               </div>
             </div>
             
-            {/* Tools Category */}
-            <div className="bg-gradient-to-br from-white to-green-50 dark:from-gray-900 dark:to-green-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-green-500 dark:text-green-400">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                  </svg>
+            {/* CSS Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">CSS</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '80%' }}
+                    ></div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Tools & Platforms</h3>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Intermediate
+                </span>
               </div>
-              
-              <div className="space-y-6">
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">Git/GitHub</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">87%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '87%' }}></div>
-                  </div>
-                </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">Figma/Design</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">78%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '78%' }}></div>
+            </div>
+            
+            {/* JAVASCRIPT Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">JAVASCRIPT</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-500 dark:to-yellow-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '40%' }}
+                    ></div>
                   </div>
                 </div>
-                
-                <div className="group">
-                  <div className="flex justify-between items-center mb-2">
-                    <div className="flex items-center">
-                      <span className="text-gray-800 dark:text-gray-200 font-medium">CI/CD</span>
-                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">75%</span>
-                    </div>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '75%' }}></div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Basics
+                </span>
+              </div>
+            </div>
+            
+            {/* REACT Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">REACT</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-cyan-400 to-cyan-600 dark:from-cyan-500 dark:to-cyan-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '30%' }}
+                    ></div>
                   </div>
                 </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Learning
+                </span>
+              </div>
+            </div>
+            
+            {/* MYSQL Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">MYSQL</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-orange-400 to-orange-600 dark:from-orange-500 dark:to-orange-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '75%' }}
+                    ></div>
+                  </div>
+                </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Intermediate
+                </span>
+              </div>
+            </div>
+            
+            {/* MONGODB Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">MONGODB</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '40%' }}
+                    ></div>
+                  </div>
+                </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Basics
+                </span>
+              </div>
+            </div>
+            
+            {/* NODE.JS Skill */}
+            <div className="group relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-center p-4">
+                <span className="font-bold w-24 text-left text-gray-900 dark:text-white">NODE.JS</span>
+                <div className="flex-1 mx-4">
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left"
+                      style={{ width: '30%' }}
+                    ></div>
+                  </div>
+                </div>
+                <span className="text-sm font-semibold bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-gray-600 dark:text-gray-300">
+                  Learning
+                </span>
               </div>
             </div>
           </div>
