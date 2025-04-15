@@ -5,7 +5,7 @@ import { Projects } from "@/components/ui/projects";
 export default function Home() {
   return (
     <>
-      <div className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center relative z-20 pt-16">
+      <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-20 pt-16">
         <h2 className="text-gray-400 dark:text-gray-300 text-4xl mb-4">Hello I'm</h2>
         <h1 className="text-black dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
         <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Frontend Developer</h3>
@@ -28,8 +28,8 @@ export default function Home() {
       </div>
       
       {/* About Section */}
-      <section id="about" className="py-24 bg-white dark:bg-gray-900 relative z-10">
-        <div className="max-w-screen-xl mx-auto px-4">
+      <section id="about" className="min-h-screen py-24 flex items-center bg-white dark:bg-gray-900 relative z-10">
+        <div className="max-w-screen-xl mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-500 dark:text-blue-400">
             About Me
           </h2>
@@ -71,8 +71,8 @@ export default function Home() {
       </section>
       
       {/* Skills Section */}
-      <section id="skills" className="py-24 bg-gray-50 dark:bg-gray-800 relative z-10">
-        <div className="max-w-screen-xl mx-auto px-4">
+      <section id="skills" className="min-h-screen py-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
+        <div className="max-w-screen-xl mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-500 dark:text-blue-400">
             My Skills
           </h2>
@@ -183,9 +183,19 @@ export default function Home() {
         </div>
       </section>
       
-      <Projects />
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen py-24 flex items-center bg-white dark:bg-gray-900 relative z-10">
+        <div className="w-full">
+          <Projects />
+        </div>
+      </section>
       
-      <ContactForm />
+      {/* Contact Section */}
+      <section id="contact" className="min-h-screen py-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
+        <div className="w-full">
+          <ContactForm />
+        </div>
+      </section>
       
       <div className="fixed top-0 left-0 right-0 bottom-0 -z-10 w-screen h-screen">
         <BackgroundBeamsWithCollision className="w-full h-full" />
