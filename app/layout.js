@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.className}>
         <body className="min-h-screen bg-white">
-        <div className="max-w-screen-xl mx-auto px-4">m run
+        <div className="max-w-screen-xl mx-auto px-4">
             <header className="flex justify-between items-center py-8">
                 <a href="/" className="nav-link text-xl font-medium">
                     Raiyan Mahfuz
@@ -49,27 +49,6 @@ export default function RootLayout({ children }) {
             </header>
 
             <main>
-                <div className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center">
-                    <h2 className="text-gray-400 text-4xl mb-4">Hello I'm</h2>
-                    <h1 className="text-black text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
-                    <h3 className="text-gray-400 text-4xl mb-8">Frontend Developer</h3>
-                    
-                    <div className="flex gap-4">
-                        <a
-                            href="/MahfuzRaiyan_Lebenslauf.pdf"
-                            download
-                            className="btn btn-black"
-                        >
-                            Download CV
-                        </a>
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                        >
-                            Contact info
-                        </button>
-                    </div>
-                </div>
                 {children}
             </main>
         </div>
