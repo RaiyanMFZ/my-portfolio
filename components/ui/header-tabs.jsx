@@ -78,28 +78,38 @@ export function HeaderTabs() {
         </Link>
         
         <div className="flex-1 flex justify-center">
-          <Tabs value={activeTab} onValueChange={handleTabClick} className="relative z-10">
-            <TabsList className="bg-white/40 dark:bg-gray-800/40 rounded-full p-1 shadow-sm">
-              <TabsTrigger 
-                value="home" 
-                className="rounded-full px-4 py-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
-              >
-                Home
-              </TabsTrigger>
-              <TabsTrigger 
-                value="projects"
-                className="rounded-full px-4 py-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
-              >
-                Projects
-              </TabsTrigger>
-              <TabsTrigger 
-                value="contact"
-                className="rounded-full px-4 py-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
-              >
-                Contact
-              </TabsTrigger>
-            </TabsList>
-          </Tabs>
+          <div className="bg-white/40 dark:bg-gray-800/40 rounded-full p-1 shadow-sm flex">
+            <button 
+              onClick={() => handleTabClick("home")}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                activeTab === "home" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              }`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => handleTabClick("projects")}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                activeTab === "projects" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              }`}
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => handleTabClick("contact")}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                activeTab === "contact" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+              }`}
+            >
+              Contact
+            </button>
+          </div>
         </div>
         
         <ThemeSwitch />
