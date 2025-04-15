@@ -1,5 +1,6 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Projects } from "@/components/ui/projects";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+      
+      <Projects />
       
       <ContactForm />
       
