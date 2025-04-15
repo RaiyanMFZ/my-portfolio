@@ -1,4 +1,4 @@
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { BackgroundPaths } from "@/components/ui/background-paths";
 import { ContactForm } from "@/components/ui/contact-form";
 import { Projects } from "@/components/ui/projects";
 
@@ -27,7 +27,6 @@ export default function Home() {
         </div>
       </div>
       
-      {/* About Section */}
       <section id="about" className="min-h-screen py-24 flex items-center bg-white dark:bg-gray-900 relative z-10">
         <div className="max-w-screen-xl mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-500 dark:text-blue-400">
@@ -70,7 +69,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Skills Section */}
+     
       <section id="skills" className="min-h-screen py-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="max-w-screen-xl mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-500 dark:text-blue-400">
@@ -78,7 +77,7 @@ export default function Home() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Frontend Skills */}
+           
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Frontend Development</h3>
               <div className="space-y-4">
@@ -112,7 +111,7 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Framework Skills */}
+            
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Frameworks & Libraries</h3>
               <div className="space-y-4">
@@ -145,8 +144,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
-            {/* Tools Skills */}
+           
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Tools & Platforms</h3>
               <div className="space-y-4">
@@ -183,14 +181,12 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Projects Section */}
       <section id="projects" className="min-h-screen py-24 flex items-center bg-white dark:bg-gray-900 relative z-10">
         <div className="w-full">
           <Projects />
         </div>
       </section>
       
-      {/* Contact Section - adjusted to connect directly with footer but keep cards spaced */}
       <section id="contact" className="pt-24 pb-16 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="w-full">
           <ContactForm />
@@ -198,7 +194,7 @@ export default function Home() {
       </section>
       
       <div className="fixed top-0 left-0 right-0 bottom-0 -z-10 w-screen h-screen">
-        <BackgroundBeamsWithCollision className="w-full h-full" />
+        <BackgroundPaths title="" />
       </div>
     </>
   );
