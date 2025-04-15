@@ -12,6 +12,8 @@ export function HeaderTabs() {
   useEffect(() => {
     const sections = [
       { id: "home", element: document.body }, // Home is the default
+      { id: "about", element: document.getElementById("about") },
+      { id: "skills", element: document.getElementById("skills") },
       { id: "projects", element: document.getElementById("projects") },
       { id: "contact", element: document.getElementById("contact") }
     ];
@@ -104,10 +106,10 @@ export function HeaderTabs() {
         </Link>
         
         <div className="flex-1 flex justify-center">
-          <div className="bg-white/40 dark:bg-gray-800/40 rounded-full p-1 shadow-sm flex">
+          <div className="bg-white/40 dark:bg-gray-800/40 rounded-full p-1 shadow-sm flex flex-wrap justify-center">
             <button 
               onClick={() => handleTabClick("home")}
-              className={`rounded-full px-4 py-2 transition-all duration-300 ${
+              className={`rounded-full px-3 py-2 transition-all duration-300 ${
                 activeTab === "home" 
                   ? "bg-blue-500 text-white shadow-md transform scale-105" 
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50"
@@ -116,8 +118,28 @@ export function HeaderTabs() {
               Home
             </button>
             <button 
+              onClick={() => handleTabClick("about")}
+              className={`rounded-full px-3 py-2 transition-all duration-300 ${
+                activeTab === "about" 
+                  ? "bg-blue-500 text-white shadow-md transform scale-105" 
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50"
+              }`}
+            >
+              About
+            </button>
+            <button 
+              onClick={() => handleTabClick("skills")}
+              className={`rounded-full px-3 py-2 transition-all duration-300 ${
+                activeTab === "skills" 
+                  ? "bg-blue-500 text-white shadow-md transform scale-105" 
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50"
+              }`}
+            >
+              Skills
+            </button>
+            <button 
               onClick={() => handleTabClick("projects")}
-              className={`rounded-full px-4 py-2 transition-all duration-300 ${
+              className={`rounded-full px-3 py-2 transition-all duration-300 ${
                 activeTab === "projects" 
                   ? "bg-blue-500 text-white shadow-md transform scale-105" 
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50"
@@ -127,7 +149,7 @@ export function HeaderTabs() {
             </button>
             <button 
               onClick={() => handleTabClick("contact")}
-              className={`rounded-full px-4 py-2 transition-all duration-300 ${
+              className={`rounded-full px-3 py-2 transition-all duration-300 ${
                 activeTab === "contact" 
                   ? "bg-blue-500 text-white shadow-md transform scale-105" 
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50"

@@ -3,12 +3,6 @@
 import { cn } from "@/lib/utils";
 
 export function SimpleFooter() {
-  const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/in/sadgidmahfuz" },
-    { name: "GitHub", href: "https://github.com/sadgidmahfuz" },
-    { name: "Email", href: "mailto:sadgidmahfuz@email.com" }
-  ];
-
   return (
     <footer className="relative z-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8 mt-20">
       <div className="max-w-screen-xl mx-auto px-4">
@@ -20,18 +14,37 @@ export function SimpleFooter() {
           
           <div className="mt-6 md:mt-0">
             <ul className="flex space-x-6">
-              {socialLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a 
+                  href="https://www.linkedin.com/in/raiyan-mahfuz-52aaa419a/"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => console.log("LinkedIn clicked")}
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/RaiyanMFZ"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => console.log("GitHub clicked")}
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:sadgidmahfuz@gmail.com"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  onClick={(e) => console.log("Email clicked")}
+                >
+                  Email
+                </a>
+              </li>
             </ul>
           </div>
         </div>
