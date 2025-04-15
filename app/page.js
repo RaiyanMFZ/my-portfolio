@@ -69,110 +69,159 @@ export default function Home() {
         </div>
       </section>
       
-     
+      
       <section id="skills" className="min-h-screen py-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="max-w-screen-xl mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-500 dark:text-blue-400">
             My Skills
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-           
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Frontend Development</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">HTML/CSS</span>
-                    <span className="text-gray-700 dark:text-gray-300">95%</span>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Frontend Category */}
+            <div className="bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-blue-500 dark:text-blue-400">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Frontend Development</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">HTML/CSS</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">95%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '95%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '95%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">JavaScript</span>
-                    <span className="text-gray-700 dark:text-gray-300">90%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">JavaScript</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">90%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '90%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">React</span>
-                    <span className="text-gray-700 dark:text-gray-300">88%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">React</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-blue-500 dark:text-blue-400">88%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '88%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '88%' }}></div>
                   </div>
                 </div>
               </div>
             </div>
             
-            
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Frameworks & Libraries</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Next.js</span>
-                    <span className="text-gray-700 dark:text-gray-300">85%</span>
+            {/* Frameworks Category */}
+            <div className="bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-purple-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-purple-500 dark:text-purple-400">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Frameworks & Libraries</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">Next.js</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">85%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '85%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Tailwind CSS</span>
-                    <span className="text-gray-700 dark:text-gray-300">92%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">Tailwind CSS</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">92%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '92%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '92%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Redux</span>
-                    <span className="text-gray-700 dark:text-gray-300">80%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">Redux</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-purple-500 dark:text-purple-400">80%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-indigo-500 rounded-full group-hover:animate-pulse" style={{ width: '80%' }}></div>
                   </div>
                 </div>
               </div>
             </div>
-           
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Tools & Platforms</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Git/GitHub</span>
-                    <span className="text-gray-700 dark:text-gray-300">87%</span>
+            
+            {/* Tools Category */}
+            <div className="bg-gradient-to-br from-white to-green-50 dark:from-gray-900 dark:to-green-900/20 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-green-500 dark:text-green-400">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white">Tools & Platforms</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">Git/GitHub</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">87%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '87%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '87%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Figma/Design</span>
-                    <span className="text-gray-700 dark:text-gray-300">78%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">Figma/Design</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">78%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '78%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '78%' }}></div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">CI/CD</span>
-                    <span className="text-gray-700 dark:text-gray-300">75%</span>
+                
+                <div className="group">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">CI/CD</span>
+                      <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-green-500 dark:text-green-400">75%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div className="bg-blue-500 h-2 rounded-full" style={{ width: '75%' }}></div>
+                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-teal-500 rounded-full group-hover:animate-pulse" style={{ width: '75%' }}></div>
                   </div>
                 </div>
               </div>
