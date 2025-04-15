@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.className}>
         <body className="min-h-screen bg-white">
-        <div className="max-w-screen-xl mx-auto px-4">
-            <header className="flex justify-between items-center py-8">
+        <div className="relative max-w-screen-xl mx-auto px-4">
+            <header className="relative z-10 flex justify-between items-center py-8">
                 <a href="/" className="nav-link text-xl font-medium">
                     Raiyan Mahfuz
                 </a>
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
                 </nav>
             </header>
 
-            <main>
+            <main className="relative z-10">
                 {children}
             </main>
         </div>
