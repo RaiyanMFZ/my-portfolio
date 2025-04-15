@@ -7,6 +7,7 @@ import Link from "next/link";
 export function HeaderTabs() {
   const [activeTab, setActiveTab] = useState("home");
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const scrollTimeoutRef = useRef(null);
   
   useEffect(() => {
@@ -21,7 +22,14 @@ export function HeaderTabs() {
     const handleScroll = () => {
       if (isScrolling) return; // Skip scroll detection if programmatic scrolling
       
-      const scrollPosition = window.scrollY + 100; // Offset for better UX
+      const scrollPosition = window.scrollY;
+      
+      // Show/hide header based on scroll position
+      // Check if we've scrolled past the first viewport height (hero section)
+      setIsVisible(scrollPosition > window.innerHeight * 0.7);
+      
+      // Add offset for better UX when detecting active section
+      const scrollPositionWithOffset = scrollPosition + 100;
       
       // Find the section that is currently in view
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -30,7 +38,7 @@ export function HeaderTabs() {
         
         const offsetTop = getOffsetTop(section.element);
         
-        if (scrollPosition >= offsetTop) {
+        if (scrollPositionWithOffset >= offsetTop) {
           setActiveTab(section.id);
           break;
         }
@@ -99,7 +107,13 @@ export function HeaderTabs() {
   };
   
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm py-4">
+    <header 
+      className={`fixed top-0 z-30 w-full bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm py-4 transition-all duration-500 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 -translate-y-full pointer-events-none'
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         <Link href="/" onClick={() => handleTabClick("home")} className="text-blue-500 dark:text-blue-400 text-xl font-medium transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-300">
           Raiyan Mahfuz
