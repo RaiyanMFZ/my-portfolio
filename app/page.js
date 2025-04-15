@@ -87,7 +87,7 @@ export default function Home() {
                     Intermediate
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -95,7 +95,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-blue-600 dark:text-blue-400 font-medium">80%</span>
               </div>
             </div>
             
@@ -109,7 +108,7 @@ export default function Home() {
                     Basics
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -117,7 +116,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-green-600 dark:text-green-400 font-medium">40%</span>
               </div>
             </div>
             
@@ -131,7 +129,7 @@ export default function Home() {
                     Intermediate
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -139,7 +137,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-blue-600 dark:text-blue-400 font-medium">80%</span>
               </div>
             </div>
             
@@ -153,7 +150,7 @@ export default function Home() {
                     Basics
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-500 dark:to-yellow-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -161,7 +158,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-yellow-600 dark:text-yellow-400 font-medium">40%</span>
               </div>
             </div>
             
@@ -175,7 +171,7 @@ export default function Home() {
                     Learning
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-cyan-400 to-cyan-600 dark:from-cyan-500 dark:to-cyan-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -183,7 +179,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-cyan-600 dark:text-cyan-400 font-medium">30%</span>
               </div>
             </div>
             
@@ -197,7 +192,7 @@ export default function Home() {
                     Intermediate
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-orange-400 to-orange-600 dark:from-orange-500 dark:to-orange-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -205,7 +200,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-orange-600 dark:text-orange-400 font-medium">75%</span>
               </div>
             </div>
             
@@ -219,7 +213,7 @@ export default function Home() {
                     Basics
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -227,7 +221,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-green-600 dark:text-green-400 font-medium">40%</span>
               </div>
             </div>
             
@@ -241,7 +234,7 @@ export default function Home() {
                     Learning
                   </span>
                 </div>
-                <div className="w-full mb-1">
+                <div className="w-full">
                   <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-gradient-to-r from-green-400 to-green-600 dark:from-green-500 dark:to-green-700 rounded-full transition-all duration-500 group-hover:translate-x-1"
@@ -249,7 +242,6 @@ export default function Home() {
                     ></div>
                   </div>
                 </div>
-                <span className="text-right text-sm text-green-600 dark:text-green-400 font-medium">30%</span>
               </div>
             </div>
           </div>
