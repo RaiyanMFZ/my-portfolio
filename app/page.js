@@ -1,4 +1,5 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { ContactForm } from "@/components/ui/contact-form";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+      
+      <ContactForm />
       
       <div className="fixed top-0 left-0 right-0 bottom-0 -z-10 w-screen h-screen">
         <BackgroundBeamsWithCollision className="w-full h-full" />
