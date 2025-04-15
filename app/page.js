@@ -190,8 +190,8 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Contact Section */}
-      <section id="contact" className="min-h-screen py-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
+      {/* Contact Section - adjusted to connect directly with footer */}
+      <section id="contact" className="pb-0 pt-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="w-full">
           <ContactForm />
         </div>

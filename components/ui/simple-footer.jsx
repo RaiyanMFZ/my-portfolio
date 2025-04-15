@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export function SimpleFooter() {
   return (
-    <footer className="relative z-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8 mt-20">
+    <footer className="relative z-20 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
@@ -49,7 +49,7 @@ export function SimpleFooter() {
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center">
+        <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
             © {new Date().getFullYear()} Raiyan Mahfuz. Alle Rechte vorbehalten.
           </p>
