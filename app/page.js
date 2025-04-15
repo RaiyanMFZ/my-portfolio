@@ -5,7 +5,7 @@ import { Projects } from "@/components/ui/projects";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-20 pt-16">
+      <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-20">
         <h2 className="text-gray-400 dark:text-gray-300 text-4xl mb-4">Hello I'm</h2>
         <h1 className="text-black dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
         <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Frontend Developer</h3>
@@ -190,8 +190,8 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Contact Section - adjusted to connect directly with footer */}
-      <section id="contact" className="pb-0 pt-24 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
+      {/* Contact Section - adjusted to connect directly with footer but keep cards spaced */}
+      <section id="contact" className="pt-24 pb-16 flex items-center bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="w-full">
           <ContactForm />
         </div>
