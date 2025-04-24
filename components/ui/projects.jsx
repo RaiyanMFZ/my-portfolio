@@ -4,10 +4,10 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A responsive dashboard for managing online store products and orders",
-      tags: ["React", "Tailwind CSS", "Node.js"],
-      githubLink: "https://github.com/RaiyanMFZ/project1"
+      title: "To Do List",
+      description: "A simple to do list app built with Next.js and Tailwind CSS",
+      tags: ["Next.js", "Tailwind CSS", "Node.js"],
+      githubLink: "https://github.com/RaiyanMFZ/my-todo-app"
     },
     {
       id: 2,

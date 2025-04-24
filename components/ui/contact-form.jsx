@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ export function ContactForm() {
     subject: "",
     message: ""
   });
-  
+
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     submitting: false,
@@ -27,23 +28,35 @@ export function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormStatus({ submitted: false, submitting: true, error: null });
-
+  
+    const templateParams = {
+      name: formData.name,
+      title: formData.subject,
+      message: formData.message,
+      email: formData.email,
+    };
+  
     try {
-      // Here you would normally send data to your backend
-      // For now we just simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await emailjs.send(
+        'service_ylmhmdd',      // <- von EmailJS Dashboard
+        'template_nggu527',     // <- von EmailJS Template
+        templateParams,
+        'lG2RgvfWFJT88k-Ds'       // <- dein Public Key (nicht geheim)
+      );
+  
       setFormStatus({ submitted: true, submitting: false, error: null });
       setFormData({ name: "", email: "", subject: "", message: "" });
-      
-      // Reset success message after 5 seconds
+  
       setTimeout(() => {
         setFormStatus(prev => ({ ...prev, submitted: false }));
       }, 5000);
     } catch (error) {
+      console.error(error);
       setFormStatus({ submitted: false, submitting: false, error: "Something went wrong. Please try again." });
     }
   };
+  
+
 
   return (
     <section className="pt-20 px-4 pb-0 relative z-20">
@@ -136,8 +149,8 @@ export function ContactForm() {
                   type="submit"
                   disabled={formStatus.submitting}
                   className={`px-6 py-3 text-white font-medium rounded-full transition-all
-                    ${formStatus.submitting 
-                      ? 'bg-blue-400 dark:bg-blue-600 cursor-not-allowed' 
+                    ${formStatus.submitting
+                      ? 'bg-blue-400 dark:bg-blue-600 cursor-not-allowed'
                       : 'bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 hover:shadow-lg'
                     }`}
                 >
