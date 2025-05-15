@@ -8,7 +8,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-20">
         <h2 className="text-gray-400 dark:text-gray-300 text-4xl mb-4">Hello I'm</h2>
         <h1 className="text-black dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
-        <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Frontend Developer</h3>
+        <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Student at Kantonsschule Hottingen</h3>
         
         <div className="flex gap-4">
           <a
@@ -35,18 +35,18 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-gray-700 dark:text-gray-300 text-lg">
-              Hey there! I'm Raiyan a passionate frontend developer based in Zurich, Switzerland.
-              For the past five years, I’ve been dedicated to creating modern, responsive, and visually appealing web applications. My focus is on building clean, user-friendly interfaces using technologies like React, Next.js, TypeScript, JavaScript, HTML, and CSS (especially Tailwind).              </p>
+              Hey there! I'm Raiyan a passionate developer based in Zurich, Switzerland.
+              For the past  years, I’ve been dedicated to creating modern, responsive, and visually appealing web applications. My focus is on building clean, user-friendly interfaces using technologies like React, Next.js and Tailwind Css.              </p>
               <p className="text-gray-700 dark:text-gray-300 text-lg">
-              What I really enjoy is bridging the gap between design and development. I’m not just focused on writing code I care a lot about how things feel to the user. I strive to create experiences that are smooth, intuitive, and accessible on all devices.              </p>
+              What I really enjoy is working with computers and solving problems, because I am very good at logical thinking. I’ve always been strong in Informatics, especially during secondary school, where I performed really well in this subject. I’m not only interested in writing code, but I also care a lot about how users experience what I create. My goal is to develop solutions that are clear, effective, and user-friendly.</p>
               <p className="text-gray-700 dark:text-gray-300 text-lg">
-              My journey into web development began at school, where I first got introduced to the basics of coding and web technologies. That initial spark quickly turned into a strong interest, and I found myself diving deeper into frontend development on my own time. What started as a school assignment soon became something I truly enjoyed and wanted to pursue seriously.
+              My journey with programming started back in secondary school, where I first learned the basics of coding and computer science. This quickly sparked my passion, and I enjoyed diving deeper into the subject outside of class. What began as school lessons turned into something I truly enjoy and want to develop further.
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-lg">
-              This past year, I’ve taken that passion to the next level by working on a wide range of projects – both as part of my studies and independently. From interactive websites to fully responsive web apps, I’ve been able to apply what I’ve learned in real-world scenarios and bring my ideas to life. These hands-on experiences have not only sharpened my technical skills but also taught me how to manage entire projects from concept to deployment.
+              Over the past year, I have taken my passion further by working on a variety of projects both as part of my studies and on my own. I have created everything from interactive websites to fully responsive web applications. These hands-on experiences have helped me improve my technical skills and also taught me how to manage a project from the initial idea all the way through to deployment.
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-lg">
-              I’m always looking for opportunities to take on new challenges, keep growing, and build things that people genuinely enjoy using. If you're looking for someone who’s passionate, detail-oriented, and constantly pushing to improve.
+              I’m always looking for opportunities to take on new challenges, keep growing, and build things that people genuinely enjoy using.
               </p>
             </div>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md aspect-[3/4] flex items-center justify-center">

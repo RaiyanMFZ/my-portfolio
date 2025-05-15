@@ -12,27 +12,27 @@ export function Projects() {
     {
       id: 2,
       title: "Weather App",
-      description: "Real-time weather application with forecast and location tracking",
-      tags: ["JavaScript", "API", "CSS"],
-      githubLink: "https://github.com/RaiyanMFZ/project2"
+      description: "React weather app with live data and forecasts.",
+      tags: ["React", "API", "Tailwind Css"],
+      githubLink: "https://github.com/RaiyanMFZ/React-Weather-App"
     },
     {
       id: 3,
-      title: "Task Management System",
-      description: "Collaborative task manager with drag-and-drop interface",
-      tags: ["React", "Redux", "Firebase"],
-      githubLink: "https://github.com/RaiyanMFZ/project3"
+      title: "MensaBZZ Webapp",
+      description: "Team-built school web app for managing the Mensa system.",
+      tags: ["Spring Boot", "React", "PostgreSQL",],
+      githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app"
     },
     {
       id: 4,
-      title: "Portfolio Website",
+      title: "Vocabulaire App",
       description: "Personal portfolio website with dark mode and animations",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      githubLink: "https://github.com/RaiyanMFZ/project4"
+      githubLink: "https://github.com/RaiyanMFZ/Vocabulaire-app"
     },
     {
       id: 5,
-      title: "Recipe Finder",
+      title: "Travel booking System",
       description: "Search and save recipes with filtering and favorites",
       tags: ["React", "API", "Styled Components"],
       githubLink: "https://github.com/RaiyanMFZ/project5"
