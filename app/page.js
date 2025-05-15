@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-20">
         <h2 className="text-gray-400 dark:text-gray-300 text-4xl mb-4">Hello I'm</h2>
-        <h1 className="text-black dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
+        <h1 className="text-blue dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
         <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Student at Kantonsschule Hottingen</h3>
         
         <div className="flex gap-4">

@@ -21,7 +21,7 @@ function FloatingPaths({
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
-                className="w-full h-full text-slate-950 dark:text-white"
+                className="w-full h-full text-blue-400 dark:text-blue-400"
                 viewBox="0 0 696 316"
                 fill="none">
                 <title>Background Paths</title>
@@ -56,7 +56,7 @@ export function BackgroundPaths({
 
     return (
         <div
-            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900">
             <div className="absolute inset-0">
                 <FloatingPaths position={1} />
                 <FloatingPaths position={-1} />
@@ -86,7 +86,7 @@ export function BackgroundPaths({
                                         }}
                                         className="inline-block text-transparent bg-clip-text 
                                         bg-gradient-to-r from-neutral-900 to-neutral-700/80 
-                                        dark:from-white dark:to-white/80">
+                                        dark:from-blue-400 dark:to-blue-500/80">
                                         {letter}
                                     </motion.span>
                                 ))}

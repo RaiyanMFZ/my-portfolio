@@ -9,7 +9,6 @@ export function SimpleFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
             <h3 className="text-xl font-semibold text-blue-500 dark:text-blue-400">Raiyan Mahfuz</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Frontend Developer</p>
           </div>
           
           <div className="mt-6 md:mt-0">
