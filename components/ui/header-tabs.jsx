@@ -8,11 +8,12 @@ export function HeaderTabs() {
   const [activeTab, setActiveTab] = useState("home");
   const [isScrolling, setIsScrolling] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const scrollTimeoutRef = useRef(null);
   
   useEffect(() => {
     const sections = [
-      { id: "home", element: document.body }, // Home is the default
+      { id: "home", element: document.body }, 
       { id: "about", element: document.getElementById("about") },
       { id: "skills", element: document.getElementById("skills") },
       { id: "projects", element: document.getElementById("projects") },
@@ -20,12 +21,11 @@ export function HeaderTabs() {
     ];
 
     const handleScroll = () => {
-      if (isScrolling) return; // Skip scroll detection if programmatic scrolling
+      if (isScrolling) return;
       
       const scrollPosition = window.scrollY;
       
-      // Show/hide header based on scroll position
-      // Check if we've scrolled past the first viewport height (hero section)
+ 
       setIsVisible(scrollPosition > window.innerHeight * 0.7);
       
       // Add offset for better UX when detecting active section
@@ -72,6 +72,7 @@ export function HeaderTabs() {
   }, [isScrolling]);
   
   const handleTabClick = (value) => {
+    setIsMobileMenuOpen(false); // Close mobile menu when a tab is clicked
     // Prevent scroll detection during programmatic scrolling
     setIsScrolling(true);
     setActiveTab(value);
@@ -108,18 +109,50 @@ export function HeaderTabs() {
   
   return (
     <header 
-      className={`fixed top-0 z-30 w-full bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm py-4 transition-all duration-500 ${
+      className={`fixed top-0 z-30 w-full bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm py-2 sm:py-4 transition-all duration-500 ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 -translate-y-full pointer-events-none'
       }`}
     >
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
-        <Link href="/" onClick={() => handleTabClick("home")} className="text-blue-500 dark:text-blue-400 text-xl font-medium transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-300">
+        <Link href="/" onClick={() => handleTabClick("home")} className="text-blue-500 dark:text-blue-400 text-lg sm:text-xl font-medium transition-colors duration-300 hover:text-blue-600 dark:hover:text-blue-300">
           Raiyan Mahfuz
         </Link>
         
-        <div className="flex-1 flex justify-center">
+        {/* Mobile Menu Button - Always visible on iPhone */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-gray-600 dark:text-gray-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {isMobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+        
+        {/* Desktop Navigation - Only visible on large screens */}
+        <div className="hidden lg:flex flex-1 justify-center">
           <div className="bg-white/40 dark:bg-gray-800/40 rounded-full p-1 shadow-sm flex flex-wrap justify-center">
             <button 
               onClick={() => handleTabClick("home")}
@@ -174,7 +207,69 @@ export function HeaderTabs() {
           </div>
         </div>
         
-        <ThemeSwitch />
+        {/* Mobile Navigation Menu - Improved for iPhone */}
+        <div 
+          className={`lg:hidden fixed top-[56px] sm:top-[72px] left-0 right-0 bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}
+        >
+          <div className="flex flex-col p-4 space-y-2">
+            <button 
+              onClick={() => handleTabClick("home")}
+              className={`w-full text-left px-4 py-4 rounded-lg transition-colors text-base ${
+                activeTab === "home" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => handleTabClick("about")}
+              className={`w-full text-left px-4 py-4 rounded-lg transition-colors text-base ${
+                activeTab === "about" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              About
+            </button>
+            <button 
+              onClick={() => handleTabClick("skills")}
+              className={`w-full text-left px-4 py-4 rounded-lg transition-colors text-base ${
+                activeTab === "skills" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              Skills
+            </button>
+            <button 
+              onClick={() => handleTabClick("projects")}
+              className={`w-full text-left px-4 py-4 rounded-lg transition-colors text-base ${
+                activeTab === "projects" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => handleTabClick("contact")}
+              className={`w-full text-left px-4 py-4 rounded-lg transition-colors text-base ${
+                activeTab === "contact" 
+                  ? "bg-blue-500 text-white" 
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              Contact
+            </button>
+          </div>
+        </div>
+        
+        <div className="hidden lg:block">
+          <ThemeSwitch />
+        </div>
       </div>
     </header>
   );

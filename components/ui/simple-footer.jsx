@@ -35,15 +35,7 @@ export function SimpleFooter() {
                   GitHub
                 </a>
               </li>
-              <li>
-                <a 
-                  href="mailto:sadgidmahfuz@gmail.com"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                  onClick={(e) => console.log("Email clicked")}
-                >
-                  Email
-                </a>
-              </li>
+    
             </ul>
           </div>
         </div>
