@@ -4,7 +4,10 @@ import { HeaderTabs } from "@/components/ui/header-tabs";
 import { SimpleFooter } from "@/components/ui/simple-footer";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+    subsets: ["latin"],
+    display: "swap",
+ });
 
 export const metadata = {
     title: "Raiyan Mahfuz",
