@@ -7,6 +7,9 @@ import { ThemeProvider } from "@/providers/theme-provider";
 const inter = Inter({ 
     subsets: ["latin"],
     display: "swap",
+    icons: {
+        icon: "/favicon.ico",
+      },
  });
 
 export const metadata = {
