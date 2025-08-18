@@ -9,22 +9,6 @@ export default function Home() {
         <h2 className="text-gray-400 dark:text-gray-300 text-4xl mb-4">Hello I'm</h2>
         <h1 className="text-blue dark:text-white text-6xl font-bold mb-4">Raiyan Mahfuz</h1>
         <h3 className="text-gray-400 dark:text-gray-300 text-4xl mb-8">Student at Kantonsschule Hottingen</h3>
-        
-        <div className="flex gap-4">
-          <a
-            href="/MahfuzRaiyan_Lebenslauf.pdf"
-            download
-            className="btn btn-black"
-          >
-            Download CV
-          </a>
-          <a
-            href="#contact"
-            className="btn btn-primary"
-          >
-            Contact Me
-          </a>
-        </div>
       </div>
       
       <section id="about" className="min-h-screen py-24 flex items-center bg-white dark:bg-gray-900 relative z-10">
