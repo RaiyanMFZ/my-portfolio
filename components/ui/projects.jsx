@@ -12,43 +12,40 @@ export function Projects() {
     },
     {
       id: 2,
-      title: "Weather App",
-      description: "React weather app with live data and forecasts.",
+      title: "Loginsystem",
+      description: "A secure login and registration system built with React, Tailwind CSS, and backend integrationA secure login and registration system built with React, Tailwind CSS, and backend integration",
       tags: ["React", "API", "Tailwind CSS"],
-      githubLink: "https://github.com/RaiyanMFZ/React-Weather-App",
+      githubLink: "https://github.com/RaiyanMFZ/Loginsystem",
       demoLink: "https://react-weather-app-raiyanmfz.vercel.app"
     },
     {
       id: 3,
-      title: "MensaBZZ Webapp",
-      description: "Team-built school web app for managing the Mensa system.",
-      tags: ["Spring Boot", "React", "PostgreSQL",],
-      githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app",
-      demoLink: "https://mensabzz.vercel.app"
+      title: "Calculator App",
+      description: "A simple calculator app built with Next.js and Tailwind CSS",
+      tags: ["Next.js", "Tailwind CSS",],
+      githubLink: "https://github.com/RaiyanMFZ/my-app-calculator",
     },
     {
       id: 4,
-      title: "Vocabulaire App",
-      description: "Personal portfolio website with dark mode and animations",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      githubLink: "https://github.com/RaiyanMFZ/Vocabulaire-app",
-      demoLink: "https://vocabulaire-app-gamma.vercel.app/"
+      title: "Konkursfälle der Schweiz",
+      description: "school project: An interactive web app for managing and displaying bankruptcy cases in Switzerland, built with html and css",
+      tags: ["HTML", "CSS", "Javascript"],
+      githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
+      demoLink: "https://konkursfaelle.vercel.app/"
     },
     {
       id: 5,
-      title: "Travel booking System",
+      title: "I2B Mensa App",
       description: "Search and save recipes with filtering and favorites",
-      tags: ["React", "API", "Styled Components"],
-      githubLink: "https://github.com/RaiyanMFZ/project5",
-      demoLink: "https://travel-booking-system.vercel.app"
+      tags: ["React", "Tailwind Css", "postgre"],
+      githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app"
     },
     {
       id: 6,
-      title: "Chat Application",
-      description: "Real-time messaging with user authentication and emoji support",
-      tags: ["Socket.io", "Express", "MongoDB"],
-      githubLink: "https://github.com/RaiyanMFZ/project6",
-      demoLink: "https://chat-app-raiyanmfz.vercel.app"
+      title: "Application mangement system",
+      description: "Team-built web hackathon app for managing your application.",
+      tags: ["next.js", "postgre", "prisma"],
+      githubLink: "https://github.com/aebyl-bzz/hackts",
     }
   ];
 
