@@ -13,7 +13,7 @@ export function Projects() {
     {
       id: 2,
       title: "Loginsystem",
-      description: "A secure login and registration system built with React, Tailwind CSS, and backend integrationA secure login and registration system built with React, Tailwind CSS, and backend integration",
+      description: "A secure login and registration system built with React",
       tags: ["React", "API", "Tailwind CSS"],
       githubLink: "https://github.com/RaiyanMFZ/Loginsystem",
       demoLink: "https://react-weather-app-raiyanmfz.vercel.app"
@@ -28,7 +28,7 @@ export function Projects() {
     {
       id: 4,
       title: "Konkursfälle der Schweiz",
-      description: "school project: An interactive web app for managing and displaying bankruptcy cases in Switzerland, built with html and css",
+      description: "An interactive web app for managing and displaying bankruptcy cases in Switzerland",
       tags: ["HTML", "CSS", "Javascript"],
       githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
       demoLink: "https://konkursfaelle.vercel.app/"

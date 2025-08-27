@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { ContactForm } from "@/components/ui/contact-form";
 import { Projects } from "@/components/ui/projects";
