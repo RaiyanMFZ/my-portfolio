@@ -20,10 +20,11 @@ export function Projects() {
     },
     {
       id: 3,
-      title: "Calculator App",
-      description: "A simple calculator app built with Next.js and Tailwind CSS",
+      title: "Budget Tracker",
+      description: "A simple Budget Tracker app built with Next.js and Tailwind CSS",
       tags: ["Next.js", "Tailwind CSS",],
-      githubLink: "https://github.com/RaiyanMFZ/my-app-calculator",
+      githubLink: "https://github.com/RaiyanMFZ/my-app-budgettracker",
+      demoLink: "https://my-app-budgettracker.vercel.app/"
     },
     {
       id: 4,
