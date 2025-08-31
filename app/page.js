@@ -34,15 +34,7 @@ export default function Home() {
               </p>
             </div>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md aspect-[3/4] flex items-center justify-center">
-              <div className="text-gray-400 dark:text-gray-500 text-center">
-                <img
-                  src="/public/IMG_0597.JPG"
-                  alt="Profile Picture"
-                  width={600}
-                  height={600}
-                  className="rounded-full shadow-lg"
-                />
-              </div>
+              <img src="/IMG_0597.JPG" alt="Profile Picture" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
