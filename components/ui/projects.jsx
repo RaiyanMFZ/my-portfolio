@@ -46,7 +46,7 @@ export function Projects() {
       description: "Search and save recipes with filtering and favorites",
       tags: ["React", "Tailwind Css", "postgre"],
       githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app",
-      image: "/images/mensa.png",
+      image: "/mensabzz.jpg",
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ export function Projects() {
       description: "Team-built web hackathon app for managing your application.",
       tags: ["next.js", "postgre", "prisma"],
       githubLink: "https://github.com/aebyl-bzz/hackts",
-      image: "/images/appmanager.png",
+      image: "/application.jpg",
     },
   ];
 
