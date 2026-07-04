@@ -7,7 +7,6 @@ export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // Ensure this only runs on client to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -19,13 +18,13 @@ export function ThemeSwitch() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 transition-colors"
+      className="flex items-center justify-center w-9 h-9 border border-border transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
       aria-label="Toggle Dark Mode"
     >
       {theme === "dark" ? (
-        <SunIcon className="h-5 w-5 text-yellow-500" />
+        <SunIcon className="h-4 w-4" />
       ) : (
-        <MoonIcon className="h-5 w-5 text-blue-500" />
+        <MoonIcon className="h-4 w-4" />
       )}
     </button>
   );
@@ -38,7 +37,7 @@ function SunIcon(props) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       {...props}
@@ -63,7 +62,7 @@ function MoonIcon(props) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       {...props}
@@ -71,4 +70,4 @@ function MoonIcon(props) {
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
   );
-} 
+}

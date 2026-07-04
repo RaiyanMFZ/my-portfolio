@@ -1,39 +1,30 @@
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { HeaderTabs } from "@/components/ui/header-tabs";
-import { SimpleFooter } from "@/components/ui/simple-footer";
-import { ThemeProvider } from "@/providers/theme-provider";
+import { SiteShell } from "@/components/layout/site-shell";
 
-const inter = Inter({ 
-    subsets: ["latin"],
-    display: "swap",
-    icons: {
-        icon: "/favicon.ico",
-      },
- });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
 
 export const metadata = {
-    title: "Raiyan Mahfuz",
-    description: "Frontend Developer Portfolio",
+  title: "Raiyan Mahfuz",
+  description: "Frontend Developer Portfolio",
 };
 
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en" suppressHydrationWarning>
-            <body className={inter.className}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <HeaderTabs />
-                    <main className="relative">
-                        {children}
-                    </main>
-                    <SimpleFooter />
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={`${playfair.variable} ${dmSans.variable} font-sans`}>
+        <SiteShell>{children}</SiteShell>
+      </body>
+    </html>
+  );
 }
