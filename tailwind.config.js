@@ -49,24 +49,20 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        blue: {
-          500: '#0095FF',
-          600: '#0077CC',
-          100: '#E6F2FF',
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      backdropBlur: {
-        xs: '2px',
-      },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-playfair)", "Georgia", "serif"],
+      },
+      letterSpacing: {
+        premium: "0.35em",
       },
     },
   },
   plugins: [],
-} 
+}
