@@ -68,18 +68,18 @@ export function ContactForm() {
     <div className="slide-container">
       <div className="max-w-2xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <span className="section-label">04 — Contact</span>
             <h2 className="section-title">Get In Touch</h2>
             <div className="section-divider mx-auto" />
-            <p className="text-muted-foreground font-light">
+            <p className="text-muted-foreground font-light text-[15px] sm:text-base px-2">
               Feel free to reach out if you have any questions
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <div className="border border-white/10 p-8 md:p-12 bg-white/[0.03] backdrop-blur-sm">
+          <div className="border border-white/10 p-5 sm:p-8 md:p-12 bg-white/[0.03] backdrop-blur-sm">
             {formStatus.submitted ? (
               <div className="text-center py-12">
                 <div className="w-12 h-12 border border-foreground/30 rounded-full flex items-center justify-center mx-auto mb-6 animate-fade-in-up">

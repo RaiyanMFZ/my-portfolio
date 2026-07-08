@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 export function Projects() {
@@ -62,12 +62,12 @@ export function Projects() {
         <span className="section-label">03 — Work</span>
         <h2 className="section-title">My Projects</h2>
         <div className="section-divider" />
-        <p className="text-muted-foreground max-w-xl mb-16 leading-relaxed font-light">
+        <p className="text-muted-foreground max-w-xl mb-10 sm:mb-16 leading-relaxed font-light text-[15px] sm:text-base">
           Here are some of my recent projects. Feel free to check them out!
         </p>
       </ScrollReveal>
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 auto-rows-fr items-stretch">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 auto-rows-fr items-stretch">
         {projects.map((project, index) => (
           <StaggerItem key={project.id} className="h-full">
             <ProjectCard project={project} index={index} />
@@ -79,26 +79,24 @@ export function Projects() {
 }
 
 function ProjectCard({ project, index }) {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.article
       className="project-card group h-full flex flex-col"
-      whileHover={{ y: -8 }}
+      whileHover={reduceMotion ? undefined : { y: -6 }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
     >
-      <div className="h-52 shrink-0 relative overflow-hidden bg-black">
-        <motion.div
-          className="absolute inset-0"
-          whileHover={{ scale: 1.06 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover opacity-75 group-hover:opacity-95 transition-opacity duration-700"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </motion.div>
+      <div className="h-44 sm:h-52 shrink-0 relative overflow-hidden bg-black">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          loading="lazy"
+          quality={75}
+          className="object-cover opacity-75 md:group-hover:opacity-95 transition-all duration-700 md:group-hover:scale-[1.04]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
         <motion.div
           className="absolute bottom-0 left-0 h-px bg-white/30"
@@ -109,8 +107,8 @@ function ProjectCard({ project, index }) {
         />
       </div>
 
-      <div className="p-6 md:p-7 flex flex-col flex-1">
-        <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 min-h-[3.5rem] line-clamp-2 leading-snug">
+      <div className="p-5 sm:p-6 md:p-7 flex flex-col flex-1">
+        <h3 className="font-display text-lg sm:text-xl md:text-2xl text-foreground mb-2 sm:mb-3 min-h-[3rem] sm:min-h-[3.5rem] line-clamp-2 leading-snug">
           {project.title}
         </h3>
         <p className="text-sm text-muted-foreground mb-5 leading-relaxed font-light flex-1 min-h-[5.5rem] line-clamp-4">
