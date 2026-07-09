@@ -16,8 +16,16 @@ export function HeaderTabs() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const scrollTimeoutRef = useRef(null);
   const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const updateIsMobile = () => setIsMobile(window.innerWidth < 768);
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+    return () => window.removeEventListener("resize", updateIsMobile);
+  }, []);
 
   const handleScroll = useCallback(() => {
     if (isScrolling) return;
@@ -31,8 +39,8 @@ export function HeaderTabs() {
     ];
 
     const scrollPosition = window.scrollY;
-    const isMobile = window.innerWidth < 768;
-    setIsVisible(isMobile ? scrollPosition > 120 : scrollPosition > window.innerHeight * 0.5);
+    const mobile = window.innerWidth < 768;
+    setIsVisible(mobile ? true : scrollPosition > window.innerHeight * 0.5);
 
     const scrollPositionWithOffset = scrollPosition + (isMobile ? 80 : 120);
 
@@ -111,11 +119,15 @@ export function HeaderTabs() {
       <motion.header
         className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-4 safe-top"
         initial={false}
-        animate={{
-          opacity: isVisible ? 1 : 0,
-          y: isVisible ? 0 : -28,
-          pointerEvents: isVisible ? "auto" : "none",
-        }}
+        animate={
+          isMobile
+            ? { opacity: 1, y: 0, pointerEvents: "auto" }
+            : {
+                opacity: isVisible ? 1 : 0,
+                y: isVisible ? 0 : -28,
+                pointerEvents: isVisible ? "auto" : "none",
+              }
+        }
         transition={{ duration: reduceMotion ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
         <nav className="hidden md:flex apple-nav-bubble">
@@ -149,8 +161,8 @@ export function HeaderTabs() {
             className="apple-nav-bubble w-full justify-between px-5 min-h-[48px]"
             aria-label="Open menu"
           >
-            <span className="text-sm font-semibold text-white">
-              {navItems.find((i) => i.id === activeTab)?.label ?? "Menu"}
+            <span className="font-display text-base font-normal text-white tracking-tight">
+              Raiyan
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

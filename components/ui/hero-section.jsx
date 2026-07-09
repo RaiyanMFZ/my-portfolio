@@ -14,7 +14,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] w-full overflow-hidden z-20 bg-black"
+      className="relative min-h-[100svh] md:min-h-[100dvh] w-full overflow-hidden z-20 bg-black"
     >
       <div className="absolute inset-0">
         <Image
@@ -30,7 +30,7 @@ export function HeroSection() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/45 md:bg-gradient-to-r md:from-black md:via-black/90 md:to-black/30" />
 
-      <div className="relative z-10 min-h-[100dvh] flex items-end md:items-center pb-16 pt-24 md:py-0 px-5 sm:px-6 md:px-12 lg:px-20 xl:px-28">
+      <div className="relative z-10 min-h-[100svh] md:min-h-[100dvh] flex items-end md:items-center pb-16 pt-20 md:pt-0 md:py-0 px-5 sm:px-6 md:px-12 lg:px-20 xl:px-28">
         <div className="max-w-2xl text-left w-full">
           <motion.p
             className="font-sans text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] sm:tracking-[0.35em] text-white/50 mb-4 sm:mb-6"

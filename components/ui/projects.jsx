@@ -1,79 +1,138 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
-export function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "To Do List",
-      description: "A simple to do list app built with Next.js and Tailwind CSS",
-      tags: ["Next.js", "Tailwind CSS", "Node.js"],
-      githubLink: "https://github.com/RaiyanMFZ/my-todo-app",
-      image: "/projects/todo-list.png",
-    },
-    {
-      id: 2,
-      title: "Tutoring Site",
-      description: "A simple tutoring site built for my friend Moses Okwuike",
-      tags: ["Next.js", "Tailwind CSS"],
-      githubLink: "https://github.com/RaiyanMFZ/nachhilfe_moses",
-      image: "/projects/tutoring.png",
-    },
-    {
-      id: 3,
-      title: "Budget Tracker",
-      description: "A simple Budget Tracker app built with Next.js and Tailwind CSS",
-      tags: ["Next.js", "Tailwind CSS"],
-      githubLink: "https://github.com/RaiyanMFZ/my-app-budgettracker",
-      image: "/projects/budget-tracker.png",
-    },
-    {
-      id: 4,
-      title: "Konkursfälle der Schweiz",
-      description: "An interactive web app for managing and displaying bankruptcy cases in Switzerland",
-      tags: ["HTML", "CSS", "Javascript"],
-      githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
-      image: "/projects/konkursfaelle.png",
-    },
-    {
-      id: 5,
-      title: "I2B Mensa App",
-      description: "Search and save recipes with filtering and favorites",
-      tags: ["React", "Tailwind Css", "postgre"],
-      githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app",
-      image: "/projects/mensa-app.png",
-    },
-    {
-      id: 6,
-      title: "Application management system",
-      description: "Team-built web hackathon app for managing your application.",
-      tags: ["next.js", "postgre", "prisma"],
-      githubLink: "https://github.com/aebyl-bzz/hackts",
-      image: "/projects/application-system.png",
-    },
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "To Do List",
+    description: "A simple to do list app built with Next.js and Tailwind CSS",
+    tags: ["Next.js", "Tailwind CSS", "Node.js"],
+    githubLink: "https://github.com/RaiyanMFZ/my-todo-app",
+    image: "/projects/todo-list.png",
+  },
+  {
+    id: 2,
+    title: "Tutoring Site",
+    description: "A simple tutoring site built for my friend Moses Okwuike",
+    tags: ["Next.js", "Tailwind CSS"],
+    githubLink: "https://github.com/RaiyanMFZ/nachhilfe_moses",
+    image: "/projects/tutoring.png",
+  },
+  {
+    id: 3,
+    title: "Budget Tracker",
+    description: "A simple Budget Tracker app built with Next.js and Tailwind CSS",
+    tags: ["Next.js", "Tailwind CSS"],
+    githubLink: "https://github.com/RaiyanMFZ/my-app-budgettracker",
+    image: "/projects/budget-tracker.png",
+  },
+  {
+    id: 4,
+    title: "Konkursfälle der Schweiz",
+    description: "An interactive web app for managing and displaying bankruptcy cases in Switzerland",
+    tags: ["HTML", "CSS", "Javascript"],
+    githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
+    image: "/projects/konkursfaelle.png",
+  },
+  {
+    id: 5,
+    title: "I2B Mensa App",
+    description: "Search and save recipes with filtering and favorites",
+    tags: ["React", "Tailwind Css", "postgre"],
+    githubLink: "https://github.com/MikolajKulig/I2b-Mensa-app",
+    image: "/projects/mensa-app.png",
+  },
+  {
+    id: 6,
+    title: "Application management system",
+    description: "Team-built web hackathon app for managing your application.",
+    tags: ["next.js", "postgre", "prisma"],
+    githubLink: "https://github.com/aebyl-bzz/hackts",
+    image: "/projects/application-system.png",
+  },
+];
 
+export function Projects() {
   return (
     <div className="slide-container">
       <ScrollReveal>
         <span className="section-label">03 — Work</span>
         <h2 className="section-title">My Projects</h2>
         <div className="section-divider" />
-        <p className="text-muted-foreground max-w-xl mb-10 sm:mb-16 leading-relaxed font-light text-[15px] sm:text-base">
+        <p className="text-muted-foreground max-w-xl mb-8 sm:mb-16 leading-relaxed font-light text-[15px] sm:text-base">
           Here are some of my recent projects. Feel free to check them out!
         </p>
       </ScrollReveal>
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 auto-rows-fr items-stretch">
+      <MobileProjectsCarousel />
+
+      <StaggerContainer className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 auto-rows-fr items-stretch">
         {projects.map((project, index) => (
           <StaggerItem key={project.id} className="h-full">
             <ProjectCard project={project} index={index} />
           </StaggerItem>
         ))}
       </StaggerContainer>
+    </div>
+  );
+}
+
+function MobileProjectsCarousel() {
+  const carouselRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const handleScroll = () => {
+      const slideWidth = carousel.offsetWidth;
+      if (!slideWidth) return;
+      const index = Math.round(carousel.scrollLeft / slideWidth);
+      setActiveIndex(Math.min(Math.max(index, 0), projects.length - 1));
+    };
+
+    carousel.addEventListener("scroll", handleScroll, { passive: true });
+    return () => carousel.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToIndex = (index) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    carousel.scrollTo({ left: index * carousel.offsetWidth, behavior: "smooth" });
+  };
+
+  return (
+    <div className="md:hidden -mx-5">
+      <div ref={carouselRef} className="projects-carousel">
+        {projects.map((project, index) => (
+          <div key={project.id} className="projects-carousel-slide">
+            <ProjectCard project={project} index={index} />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center gap-2 mt-6">
+        {projects.map((project, index) => (
+          <button
+            key={project.id}
+            type="button"
+            aria-label={`Go to project ${project.title}`}
+            onClick={() => scrollToIndex(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === activeIndex ? "w-6 bg-white/80" : "w-1.5 bg-white/25"
+            }`}
+          />
+        ))}
+      </div>
+
+      <p className="text-center text-[10px] uppercase tracking-[0.25em] text-white/30 mt-3">
+        Swipe to explore
+      </p>
     </div>
   );
 }
