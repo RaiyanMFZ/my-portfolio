@@ -9,7 +9,7 @@ export default function AboutPhoto() {
         fill
         sizes="(max-width: 1024px) 80vw, 35vw"
         className="object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-[1.02]"
-        quality={75}
+        quality={95}
         priority
       />
     </div>
